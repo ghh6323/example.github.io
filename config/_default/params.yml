@@ -7,16 +7,16 @@
 menu:
   - name: home
     url: ""
-    icon: # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
+    icon: "f015"   # 房子图标
   - name: archives
     url: "archives"
-    icon:
+    icon: "f187"   # 盒子图标
   - name: about
     url: "about"
-    icon:
+    icon: "f007"   # 用户图标
   - name: friend
     url: "friend"
-    icon:
+    icon: "f0c0"   # 用户组图标
 
 mainSections: ["post"]
 # 年，月，日及时间的格式化样式
@@ -64,7 +64,7 @@ banner_srcset:
     - src: "images/wmls.png"
       media: "(min-width: 800px)"
 
-avatar: "/images/avatar.png"
+avatar: "avatar.png"
 
 # Control the display of the post cover
 # If not set, the banner image will be displayed by default
@@ -219,7 +219,7 @@ reimu_cursor:
     pointer: ../images/cursor/reimu-cursor-pointer.png
     text: ../images/cursor/reimu-cursor-text.png
 
-icon_font: 4552607_ex15nbittbh
+icon_font: false
 
 # Font loading strategy
 # Custom Font -> Google Fonts -> Local FallBack Font
