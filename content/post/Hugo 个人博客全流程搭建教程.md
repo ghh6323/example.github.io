@@ -6,6 +6,7 @@ lastmod: 2026-07-13T11:00:00-07:00
 cover: "images/my-cover.png"
 ---
 
+
 # Hugo 个人博客全流程搭建教程
 
 > 基于 **Hugo** + **GitHub Pages** + **hugo-theme-reimu** 主题  
@@ -15,13 +16,8 @@ cover: "images/my-cover.png"
 
 ## 1. 环境搭建
 
-### 1.1 Git 下载
 
-1. 前往 [Git 官网](https://git-scm.com/) 下载安装程序
-2. 一路点击 **下一步**，默认安装即可
-3. 若不懂其含义，尽量不要修改选项
-
-### 1.2 Hugo 下载
+### 1.1 Hugo 下载
 
 1. 前往 [Hugo GitHub Releases](https://github.com/gohugoio/hugo/releases) 页面
 2. 选择最新版本的 **Windows Extended** 版本（文件名含 `hugo_extended_withdeploy_xxx_windows-amd64`）
@@ -29,7 +25,7 @@ cover: "images/my-cover.png"
 
 > ⚠️ **注意**：必须下载 **Extended** 版本，否则主题 SCSS 编译会报错。
 
-### 1.3 下载主题
+### 1.2 下载主题
 
 1. 前往 [hugo-theme-reimu](https://github.com/D-Sketon/hugo-theme-reimu) 官方页面
 2. 选择最新版本，下载 `Source code` 后解压
@@ -125,7 +121,7 @@ hugo server --buildDrafts --disableFastRender
 
 ## 3. 主题设置
 
-### 3.1 多语言 i18n 配置
+### 3.1 上方菜单设置
 
 打开 `blog/config/_default/params.yml`，自定义 `menu` 的 `name` 和 `url`：
 
@@ -164,14 +160,12 @@ friend: 友链
 #### 3.2.1 基础信息
 
 ```yaml
-author: Dut.
-email: 1585641459@qq.com
-description: "如果我们不曾相遇..."
-banner: "images/wmls.png"        # 首页背景图，放在 static/images/
+author: 
+email: 
+description: "xxx"
+banner: "images/xxx.png"        # 首页背景图，放在 static/images/
 avatar: "avatar.png"             # 头像，放在 static/avatar/ 下
 ```
-
-> ⚠️ **头像路径坑**：`avatar` 配置只写文件名，不要加路径。文件必须放在 `static/avatar/avatar.png`，而不是 `static/images/`。
 
 #### 3.2.2 颜色配置（去红变蓝示例）
 
@@ -283,8 +277,6 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-> ⚠️ **注意**：`HUGO_VERSION` 必须与你本地使用的版本一致。
-
 ### 4.3 推送代码
 
 ```bash
@@ -310,41 +302,10 @@ git push -u origin main
 
 ---
 
-## 5. 常见问题排查
 
-### 5.1 网站显示 404 / README 内容
+## 5. 后续更新博客
 
-- 检查 **Settings → Pages → Source** 是否为 **GitHub Actions**
-- 检查 `.github/workflows/hugo.yml` 是否存在且语法正确
-- 检查 Actions 日志是否有报错（SCSS 编译错误通常是颜色值没加引号）
-
-### 5.2 头像 / 封面图 404
-
-- 头像必须放在 `static/avatar/avatar.png`，配置写 `avatar: "avatar.png"`
-- 封面图放在 `static/images/xxx.png`，文章里写 `cover: "/images/xxx.png"`（带 `/`）
-- 检查 GitHub 仓库中 `static` 文件夹是否已上传
-
-### 5.3 菜单图标不显示
-
-- 确认 `params.yml` 中 `icon_font: false`
-- 确认 `menu.icon` 使用的是 FontAwesome Unicode（如 `"f015"`）
-
-### 5.4 颜色修改不生效
-
-- 删除 `resources/_gen` 缓存文件夹
-- 重启 `hugo server --buildDrafts --disableFastRender`
-- 检查 YAML 中颜色值是否加了引号
-
-### 5.5 本地能预览，部署后样式错乱
-
-- 检查 `hugo.toml` 中 `baseURL` 是否与 GitHub Pages 地址完全一致（含仓库名后缀）
-- 检查 Actions 中 `hugo --minify` 是否成功执行
-
----
-
-## 6. 后续更新博客
-
-### 6.1 写文章
+### 5.1 写文章
 
 在 `content/post/` 下新建 `.md` 文件：
 
@@ -361,7 +322,7 @@ cover: "/images/cover.jpg"
 正文内容，支持 Markdown 语法...
 ```
 
-### 6.2 推送更新
+### 5.2 推送更新
 
 ```bash
 git add .
@@ -371,6 +332,3 @@ git push origin main
 
 推送后 Actions 会自动构建，1~3 分钟后刷新网站即可看到更新。
 
----
-
-> 🎉 至此，你的 Hugo 个人博客已搭建完成。后续只需专注写作，GitHub Actions 会自动帮你完成部署！
