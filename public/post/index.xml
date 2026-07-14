@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dut的个人博客</title>
-    <link>https://example.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content from Dut的个人博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
@@ -12,21 +12,39 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Mon, 13 Jul 2026 16:50:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 11:00:00 -0700</lastBuildDate>
     
     
-    <atom:link href="https://example.github.io/post/index.xml" rel="self" type="application/rss&#43;xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
     
     
 
     <item>
+      <title>我的第一条博客</title>
+      <link>http://localhost:1313/post/hello/</link>
+      <pubDate>Mon, 13 Jul 2026 11:00:00 -0700</pubDate>
+      <author>1585641459@qq.com (Dut.)</author>
+      <guid>http://localhost:1313/post/hello/</guid>
+      <description>
+        <![CDATA[<h1>我的第一条博客</h1><p>作者：Dut.（1585641459@qq.com）</p>
+        
+          <p>你干嘛哈哈哎呦！</p>
+        
+        <hr><p>本文2026-07-13首发于<a href='http://localhost:1313/'>Dut的个人博客</a>，最后修改于2026-07-13</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
       <title>我的第二篇文章</title>
-      <link>https://example.github.io/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</link>
+      <link>http://localhost:1313/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</link>
       <pubDate>Mon, 13 Jul 2026 16:50:11 &#43;0800</pubDate>
       <author>1585641459@qq.com (Dut.)</author>
-      <guid>https://example.github.io/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
+      <guid>http://localhost:1313/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
       <description>
         <![CDATA[<h1>我的第二篇文章</h1><p>作者：Dut.（1585641459@qq.com）</p>
         
@@ -41,7 +59,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">)</span>
 </span></span></code></pre></div>
         
-        <hr><p>本文2026-07-13首发于<a href='https://example.github.io/'>Dut的个人博客</a>，最后修改于2026-07-13</p>]]>
+        <hr><p>本文2026-07-13首发于<a href='http://localhost:1313/'>Dut的个人博客</a>，最后修改于2026-07-13</p>]]>
       </description>
       
     </item>
