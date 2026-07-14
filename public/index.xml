@@ -37,32 +37,5 @@
       
     </item>
     
-    
-
-    <item>
-      <title>我的第二篇文章</title>
-      <link>http://localhost:1313/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Mon, 13 Jul 2026 16:50:11 &#43;0800</pubDate>
-      <author>1585641459@qq.com (Dut.)</author>
-      <guid>http://localhost:1313/post/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</guid>
-      <description>
-        <![CDATA[<h1>我的第二篇文章</h1><p>作者：Dut.（1585641459@qq.com）</p>
-        
-          <h2 id="这是一个二级标题">
-<a class="header-anchor" href="#%e8%bf%99%e6%98%af%e4%b8%80%e4%b8%aa%e4%ba%8c%e7%ba%a7%e6%a0%87%e9%a2%98"></a>
-这是一个二级标题
-</h2><p>这是正文，<strong>粗体</strong>，<em>斜体</em>。</p>
-<ul>
-<li>列表项 1</li>
-<li>列表项 2</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">)</span>
-</span></span></code></pre></div>
-        
-        <hr><p>本文2026-07-13首发于<a href='http://localhost:1313/'>Dut的个人博客</a>，最后修改于2026-07-13</p>]]>
-      </description>
-      
-    </item>
-    
   </channel>
 </rss>
