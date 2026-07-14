@@ -3,7 +3,7 @@ title: '我的第一条博客'
 
 date: 2026-07-13T11:00:00-07:00
 lastmod: 2026-07-13T11:00:00-07:00
-cover: "/images/my-cover.png"
+cover: "images/my-cover.png"
 ---
 
 你干嘛哈哈哎呦！
