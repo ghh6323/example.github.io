@@ -1,0 +1,161 @@
+---
+title: 'Day1初学django'
+date: 2026-07-13T11:00:00-07:00
+lastmod: 2026-07-13T11:00:00-07:00
+cover: "images/my-cover.png"
+---
+
+### 1. 安装 Django
+
+全局安装：
+
+```bash
+pip install django
+```
+
+检查是否安装成功：
+
+```bash
+python -m django --version
+```
+
+### 2. 创建 Django 项目（终端）
+
+进入你想创建项目的目录：
+
+```bash
+cd D:```
+
+创建自己的项目：
+
+```bash
+django-admin startproject 自己的项目名称
+```
+
+这个时候会生成结构如下的目录：
+
+```text
+myproject/
+├── manage.py              # 项目的管理，启动项目、创建app、数据管理
+└── myproject/             # 项目配置包
+    ├── __init__.py
+    ├── settings.py         # 全局配置（数据库、时区、语言等）
+    ├── urls.py             # 路由总入口
+    ├── asgi.py             # ASGI 部署入口，接收网络请求
+    └── wsgi.py             # WSGI 部署入口，接收网络请求
+```
+
+### 3. 功能模块
+
+在 PyCharm 的 Terminal 底部面板（或 PowerShell）执行：
+
+```bash
+# 1. 先进入项目根目录（manage.py 所在的目录）
+cd D:\你的项目路径
+# 2. 如果用了虚拟环境，先激活（Anaconda 的话）
+conda activate django_env
+
+# 3. 创建 app，比如叫 myapp
+python manage.py startapp myapp
+```
+
+执行后，项目目录会多出一个 `myapp/` 文件夹：
+
+```text
+myproject/
+├── manage.py
+├── myproject/
+│   ├── settings.py
+│   ├── urls.py
+│   └── ...
+└── myapp/              ← 新创建的 app
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── models.py       ← 数据库模型写这里
+    ├── tests.py
+    └── views.py        ← 视图逻辑写这里
+```
+
+### 4. 注册
+
+打开 `myproject/settings.py`（项目配置包里的那个），找到：
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+在末尾添加你的 app 名称：
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myapp.apps.MyappConfig',  # ← 添加这一行，myapp 换成你实际的 app 名字，MyappConfig 也换成你实际的 app 名字 + Config
+]
+```
+
+### 5. 编写 URL 和视图函数对应关系
+
+**项目级 urls.py**（`myproject/urls.py`）
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+from myapp import views  # ← 导入 views
+
+urlpatterns = [
+    # path("admin/", admin.site.urls),
+    path("index/", views.index),  # ← 现在 views 已定义
+]
+```
+
+![项目级 urls.py](https://github.com/user-attachments/assets/4acc808f-eded-4960-93e6-c3f98d7cc7e5)
+
+**对应的 views.py**（`myapp/views.py`）
+
+```python
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("这是 index 页面")
+```
+
+![views.py](https://github.com/user-attachments/assets/afaf3695-d258-4c94-8a82-b243a067618a)
+
+### 6. 启动 Django
+
+在 PyCharm 的 Terminal 里（或 PowerShell）执行：
+
+```bash
+# 1. 先进入项目根目录（manage.py 所在的文件夹）
+cd D:\你的项目路径\myproject
+
+# 2. 如果用了虚拟环境，先激活
+conda activate django_env
+
+# 3. 启动开发服务器
+python manage.py runserver
+```
+
+看到下面输出就说明启动成功了：
+
+```text
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
+
+然后浏览器访问 `http://127.0.0.1:8000/index/` 即可。
+
+![启动成功](https://github.com/user-attachments/assets/6667dd56-8cb3-4376-9849-839940c41050)
